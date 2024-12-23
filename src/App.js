@@ -126,7 +126,6 @@ function App() {
               setFirstName(e.target.value)
             }
             placeholder="Type first name..."
-            required
           />
         </label>
         <label htmlFor="lastname" style={styles.labelStyle}>
@@ -139,11 +138,10 @@ function App() {
               setLastName(e.target.value)
             }
             placeholder="Type last name..."
-            required
           />
         </label>
         <label htmlFor="email" style={styles.labelStyle}>
-          Enter Email*
+          Email*
           <TextInput
             name="email"
             id="email"
@@ -152,11 +150,10 @@ function App() {
               setEmail(e.target.value)
             }
             placeholder="Enter email"
-            required
           />
         </label>
         <label htmlFor="mobileNumber" style={styles.labelStyle}>
-          Mobile Phone
+          Mobile Phone*
           <TextInput
             name="mobileNumber"
             id="mobileNumber"
@@ -255,10 +252,9 @@ function App() {
             setResume(e.target.files[0])
           }
           placeholder="Enter Upload File"
-          required
         />
         <label htmlFor="url" style={styles.labelStyle}>
-          Enter URL*
+          URL for personel webpage*
           <TextInput
             id="url"
             name="url"
@@ -266,7 +262,6 @@ function App() {
               setUrl(e.target.value)
             }
             placeholder="Enter url"
-            required
           />
         </label>
         <label style={styles.labelStyle}>
@@ -294,7 +289,6 @@ function App() {
             setAbout(e.target.value)
           }
           placeholder="About yourself..."
-          required
         />
         <div style={{width: "15rem"}}>
           <Button
@@ -311,7 +305,6 @@ function App() {
           />
         </div>
       </form>
-    
     </div>
   );
 }
