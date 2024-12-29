@@ -22,7 +22,7 @@ function App() {
     Spanish: false,
     French: false,
   });
-  const [resume, setResume] = useState(""||null);
+  const [aboutYou, setAboutYou] = useState(""||null);
   const [url, setUrl] = useState(""||null);
   const [selectedOption, setSelectedOption] =
     useState(""||null);
@@ -49,7 +49,7 @@ function App() {
           gender,
           selectedOption,
           languages,
-          resume,
+          aboutYou,
           url,
           about
         );
@@ -75,7 +75,7 @@ function App() {
       Spanish: false,
       French: false,
     });
-    setResume("");
+    setAboutYou("");
     setUrl("");
     setSelectedOption("");
     setAbout("");
@@ -252,7 +252,7 @@ function App() {
           id="file"
           accept="image/png, image/jpeg"
           onChange={(e) =>
-            setResume(e.target.files[0])
+            setAboutYou(e.target.files[0])
           }
           placeholder="Enter Upload File"
           required
