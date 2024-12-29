@@ -57,10 +57,10 @@ function App() {
     // code for form submission to database to go here
   };
 
-  const handleSubjectChange = (sub) => {
+  const handleLanguagesChange = (lang) => {
     setLanguages((prev) => ({
       ...prev,
-      [sub]: !prev[sub],
+      [lang]: !prev[lang],
     }));
   };
   const handleReset = () => {
@@ -216,7 +216,7 @@ function App() {
               id="English"
               checked={languages.English === true}
               onChange={(e) =>
-                handleSubjectChange("English")
+                handleLanguagesChange("English")
               }
             />
             English
@@ -227,7 +227,7 @@ function App() {
               id="Spanish"
               checked={languages.Spanish === true}
               onChange={(e) =>
-                handleSubjectChange("Spanish")
+                handleLanguagesChange("Spanish")
               }
             />
             Spanish
@@ -238,7 +238,7 @@ function App() {
               id="French"
               checked={languages.French === true}
               onChange={(e) =>
-                handleSubjectChange("French")
+                handleLanguagesChange("French")
               }
             />
             French
