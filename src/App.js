@@ -2,7 +2,7 @@ import { React, useState } from "react";
 import validator from "validator";
 
 // component imports
-import H1Header from "./components/H1Header";
+import H1Heading from "./components/H1Heading";
 import TextInput from "./components/TextInput";
 import CheckboxInput from "./components/CheckboxInput";
 import RadioInput from "./components/RadioInput";
@@ -22,7 +22,7 @@ function App() {
     Spanish: false,
     French: false,
   });
-  const [resume, setResume] = useState(""||null);
+  const [aboutYou, setAboutYou] = useState(""||null);
   const [url, setUrl] = useState(""||null);
   const [selectedOption, setSelectedOption] =
     useState(""||null);
@@ -49,7 +49,7 @@ function App() {
           gender,
           selectedOption,
           languages,
-          resume,
+          aboutYou,
           url,
           about
         );
@@ -57,10 +57,10 @@ function App() {
     // code for form submission to database to go here
   };
 
-  const handleSubjectChange = (sub) => {
+  const handleLanguagesChange = (lang) => {
     setLanguages((prev) => ({
       ...prev,
-      [sub]: !prev[sub],
+      [lang]: !prev[lang],
     }));
   };
   const handleReset = () => {
@@ -75,7 +75,7 @@ function App() {
       Spanish: false,
       French: false,
     });
-    setResume("");
+    setAboutYou("");
     setUrl("");
     setSelectedOption("");
     setAbout("");
@@ -113,7 +113,7 @@ function App() {
 
   return (
     <div style={styles.appStyle}>
-      <H1Header textContent="Example React Form" />
+      <H1Heading textContent="Example React Form" />
       <p style={styles.pStyle}>* indicates required information</p>
       <form action="#" method="post">
         <label htmlFor="firstname" style={styles.labelStyle}>
@@ -213,7 +213,7 @@ function App() {
               id="English"
               checked={languages.English === true}
               onChange={(e) =>
-                handleSubjectChange("English")
+                handleLanguagesChange("English")
               }
             />
             English
@@ -224,7 +224,7 @@ function App() {
               id="Spanish"
               checked={languages.Spanish === true}
               onChange={(e) =>
-                handleSubjectChange("Spanish")
+                handleLanguagesChange("Spanish")
               }
             />
             Spanish
@@ -235,7 +235,7 @@ function App() {
               id="French"
               checked={languages.French === true}
               onChange={(e) =>
-                handleSubjectChange("French")
+                handleLanguagesChange("French")
               }
             />
             French
@@ -249,7 +249,7 @@ function App() {
           id="file"
           accept="image/png, image/jpeg"
           onChange={(e) =>
-            setResume(e.target.files[0])
+            setAboutYou(e.target.files[0])
           }
           placeholder="Enter Upload File"
         />
