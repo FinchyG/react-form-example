@@ -2,7 +2,7 @@ import { React, useState } from "react";
 import validator from "validator";
 
 // component imports
-import H1Header from "./components/H1Header";
+import H1Heading from "./components/H1Heading";
 import TextInput from "./components/TextInput";
 import CheckboxInput from "./components/CheckboxInput";
 import RadioInput from "./components/RadioInput";
@@ -113,7 +113,7 @@ function App() {
 
   return (
     <div style={styles.appStyle}>
-      <H1Header textContent="Example React Form" />
+      <H1Heading textContent="Example React Form" />
       <p style={styles.pStyle}>* indicates required information</p>
       <form action="#" method="post">
         <label htmlFor="firstname" style={styles.labelStyle}>
